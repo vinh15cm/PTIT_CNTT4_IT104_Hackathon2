@@ -7,7 +7,7 @@ interface PostListProps {
   toggleLike: (id: number) => void;
 }
 
-const PostList: React.FC<PostListProps> = ({ posts, toggleLike }) => {
+export default function PostList({ posts, toggleLike }: PostListProps) {
   return (
     <div className="space-y-4">
       {posts.map((post) => (
@@ -15,6 +15,4 @@ const PostList: React.FC<PostListProps> = ({ posts, toggleLike }) => {
       ))}
     </div>
   );
-};
-
-export default PostList;
+}

@@ -6,7 +6,7 @@ interface PostItemProps {
   toggleLike: (id: number) => void;
 }
 
-const PostItem: React.FC<PostItemProps> = ({ post, toggleLike }) => {
+export default function PostItem({ post, toggleLike }:PostItemProps) {
   return (
     <div className="bg-white rounded-xl p-4 shadow flex justify-between items-center">
       <div>
@@ -20,4 +20,3 @@ const PostItem: React.FC<PostItemProps> = ({ post, toggleLike }) => {
   );
 };
 
-export default PostItem;

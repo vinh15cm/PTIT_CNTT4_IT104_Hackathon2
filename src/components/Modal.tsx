@@ -5,7 +5,7 @@ interface ModalProps {
   onSave: (title: string, content: string) => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ onClose, onSave }) => {
+export default function Modal({ onClose, onSave }:ModalProps) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
@@ -45,4 +45,3 @@ const Modal: React.FC<ModalProps> = ({ onClose, onSave }) => {
   );
 };
 
-export default Modal;

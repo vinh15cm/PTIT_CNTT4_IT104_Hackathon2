@@ -9,7 +9,7 @@ export interface Post {
   liked: boolean;
 }
 
-const App: React.FC = () => {
+export default function App() {
   const [posts, setPosts] = useState<Post[]>(() => {
     const saved = localStorage.getItem("posts");
     return saved ? JSON.parse(saved) : [];
@@ -85,6 +85,4 @@ const App: React.FC = () => {
       )}
     </div>
   );
-};
-
-export default App;
+}
